@@ -1,0 +1,556 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ===================== NAVBAR ===================== -->
+{% include 'includes/navbar.html' %}
+<!-- ===================== HERO SECTION ===================== -->
+<section class="d-flex align-items-center justify-content-center"
+    style="background-color:#F8F7FF; margin:auto; overflow:hidden;">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+
+            <!-- LEFT TEXT CONTENT -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div>
+                    <h1 class="fw-bold mb-3" style="color:#5A38F7; font-size:38px;">Templates & UI Kits</h1>
+                    <p class="text-secondary mb-4" style="font-size:17px; line-height:1.7; max-width:90%;">
+                        Browse our collection of premium HTML templates, <br> landing pages, and UI kits.
+                        Built with modern frameworks <br> and ready to customize for your next project.
+                    </p>
+
+                    <!-- Search Bar (Button Inside Box) -->
+                    <form class="position-relative mt-4" role="search" style="max-width:400px;">
+                        <input type="search" class="form-control p-3 rounded-pill"
+                            placeholder="Search for HTML, UI Kits..." aria-label="Search"
+                            style="border:1.5px solid #ccc; padding-right:130px;">
+                        <button type="submit" class="btn text-white fw-semibold rounded-pill position-absolute"
+                            style="background-color:#76C01D; right:6px; top:6px; bottom:6px; padding:0 25px;">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGES (STACKED) -->
+            <div class="col-md-6 text-center">
+                <div class="d-flex flex-column align-items-center justify-content-center gap-4">
+                    <!-- Top Image -->
+                    <img src="{% static 'images/template-top.png' %}" alt="Business Template"
+                        class="rounded-4 shadow-sm" style="width:450px; height:250px; object-fit:cover;">
+
+                    <!-- Bottom Image -->
+                    <img src="{% static 'images/template-bottom.png' %}" alt="Creative Template"
+                        class="rounded-4 shadow-sm" style="width:450px; height:250px; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===================== SAVE ON UI TEMPLATES ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+
+        <!-- Divider Line -->
+        <hr class="border-dark mb-5">
+
+        <!-- Center Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color:#5A38F7;">Save on UI Templates</h2>
+            
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/theme1.png' %}" alt="Flatsome - Multi-Purpose"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Flatsome - Multi-Purpose</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/ui-template2.png' %}" alt="Horizon - Landing Page"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Horizon - Landing Page</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">184 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/ui-template3.png' %}" alt="AdminPro - Dashboard UI Kit"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">AdminPro - Dashboard UI Kit</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★★ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">260 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ===================== WEEKLY BESTSELLERS ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+
+        <!-- Center Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color:#5A38F7;">Weekly Bestsellers</h2>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/componenthub.png' %}" alt="ComponentHub - React UI Kit"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">ComponentHub - React UI Kit</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/grab-deals.png' %}" alt="Flatsome - Multi-Purpose"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Flatsome - Multi-Purpose</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/trend2.png' %}" alt="LaunchKit - SaaS Landing Template"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">LaunchKit - SaaS Landing Template</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/agency.png' %}" alt="Flatsome - Coffee Website"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Flatsome - Multi-Purpose</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/food-delivery.png' %}" alt="Food Delivery Website"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Food Delivery Website</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/admin-pro.png' %}" alt="AdminPro - Dashboard UI Kit"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">AdminPro - Dashboard UI Kit</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ===================== TOP SELLERS ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+
+        <!-- Center Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color:#5A38F7;">Top Sellers</h2>
+            
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/yellow.png' %}" alt="Flatsome - Multi-Purpose"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Flatsome - Multi-Purpose</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/grab-deals.png' %}" alt="Food Delivery Website"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Food Delivery Website</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/theme4.png' %}" alt="AdminPro - Dashboard UI Kit"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">AdminPro - Dashboard UI Kit</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ===================== TOP CLEAN ITEMS ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+
+        <!-- Center Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color:#5A38F7;">Top Clean Items</h2>
+
+        </div>
+
+        <!-- Cards Row -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/clean-portfolio.png' %}" alt="Flatsome - Multi-Purpose"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Flatsome - Multi-Purpose</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/clean-it-solution.png' %}" alt="Food Delivery Website"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">Food Delivery Website</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="ui-card bg-white rounded-4 shadow-sm p-3 position-relative">
+                    <div class="ui-card-img mb-3">
+                        <img src="{% static 'images/clean-dashboard.png' %}" alt="AdminPro - Dashboard UI Kit"
+                            class="img-fluid rounded-3">
+                    </div>
+                    <h6 class="fw-semibold mb-1">AdminPro - Dashboard UI Kit</h6>
+                    <p class="text-secondary small mb-2">by UX-themes</p>
+                    <hr class="my-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="fw-bold mb-0">$99</p>
+                            <p class="text-warning small mb-1">★★★★☆ <span class="text-dark ms-1">6</span></p>
+                            <p class="text-secondary small mb-0">205 Sales</p>
+                        </div>
+                        <button class="btn cart-btn rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-cart fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== WHAT OUR CUSTOMERS SAY ===== -->
+<section class="testimonials py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+
+        <!-- Heading -->
+        <h5 class="testimonials-title d-inline-block mb-3">What Our Customers Say</h5>
+        <p class="testimonials-subtitle mb-5">Join thousands of satisfied customers</p>
+
+        <!-- Testimonials Row -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Sarah.png' %}" alt="Sarah Johnson"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Sarah Johnson</h6>
+                    <p class="text-secondary small mb-2">Web Developer</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        The quality of themes on this marketplace is outstanding.
+                        I've built over 20 client sites using templates from here and they never disappoint.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Michael.png' %}" alt="Michael Chen"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Michael Chen</h6>
+                    <p class="text-secondary small mb-2">Agency Owner</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        As an agency, we rely on high-quality templates to deliver projects quickly.
+                        The variety and quality here are unmatched in the industry.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Emily.png' %}" alt="Emily Rodriguez"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Emily Rodriguez</h6>
+                    <p class="text-secondary small mb-2">Freelance Designer</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        I love how easy it is to customize these themes.
+                        The documentation is excellent and the support from authors is fantastic.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== STAY UPDATED ===================== -->
+<section class="py-5 text-center text-white mb-5" style="background-color:#2A2261;">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Stay Updated</h2>
+        <p class="mb-4">Get the latest templates, exclusive deals, and design inspiration delivered to your inbox weekly
+        </p>
+        <form class="d-flex justify-content-center flex-wrap gap-2 mb-3">
+            <input type="email" class="form-control w-50 p-3 rounded-start" placeholder="Enter your email"
+                style="max-width:400px; border:none;">
+            <button type="submit" class="btn px-4 fw-semibold rounded-end"
+                style="background-color:#76C01D; color:white;">Subscribe</button>
+        </form>
+        <p class="small text-white-50 mt-3">
+            By subscribing, you agree to our <a href="#" class="text-decoration-underline text-white-50">Privacy
+                Policy</a>
+            and consent to receive updates.
+        </p>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+{% include 'includes/footer.html' %}
+
+{% endblock %}

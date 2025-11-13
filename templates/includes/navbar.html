@@ -1,0 +1,85 @@
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg" style="background-color: #431A97;">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Left: Brand -->
+        <a class="navbar-brand text-white fw-semibold fs-4" href="{% url 'home' %}" style="font-style: italic;">
+            Thememarket
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <!-- Center: Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold {% if request.resolver_match.url_name == 'home' %}active-link{% endif %}"
+                        href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li class="nav-item dropdown position-relative">
+                    <a class="nav-link fw-semibold {% if request.resolver_match.url_name == 'themes' %}active-link{% endif %}"
+                        href="{% url 'themes' %}" id="themesDropdown">
+                        Themes
+                    </a>
+
+                    <ul class="dropdown-menu shadow border-0 mt-2 text-center">
+                        <li><a class="dropdown-item fw-semibold" href="{% url 'business_themes' %}">Business Themes</a>
+                        </li>
+                        <li><a class="dropdown-item fw-semibold" href="{% url 'portfolio_themes' %}">Portfolio
+                                Themes</a></li>
+                        <li><a class="dropdown-item fw-semibold" href="{% url 'blog_themes' %}">Blog Themes</a></li>
+                        <li><a class="dropdown-item fw-semibold" href="{% url 'ecommerce_themes' %}">E-Commerce
+                                Themes</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link fw-semibold {% if request.resolver_match.url_name == 'templates' %}active-link{% endif %}"
+                        href="{% url 'templates' %}">
+                        Templates
+                    </a>
+
+                    <ul class="dropdown-menu shadow border-0 mt-2 text-center">
+                        <li><a class="dropdown-item fw-semibold" href="#">HTML Templates</a></li>
+                        <li><a class="dropdown-item fw-semibold" href="#">Landing Page Templates</a></li>
+                        <li><a class="dropdown-item fw-semibold" href="#">UI Kits</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold {% if request.resolver_match.url_name == 'about' %}active-link{% endif %}"
+                        href="{% url 'about' %}">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold {% if request.resolver_match.url_name == 'contact' %}active-link{% endif %}"
+                        href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right: Icons -->
+        <div class="navbar-icons d-flex align-items-center" style="gap: 20px;">
+
+            <a href="{% url 'login' %}" class="nav-link">
+                <i class="bi bi-person-circle" style="color: #76C01D; font-size: 24px;"></i>
+            </a>
+
+            <a href="{% url 'cart' %}" class="nav-link position-relative">
+                <i class="bi bi-cart" style="color: #76C01D; font-size: 24px;"></i>
+
+                <!-- Badge -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    4
+                </span>
+            </a>
+
+        </div>
+    </div>
+</nav>

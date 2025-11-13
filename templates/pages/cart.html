@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ===================== NAVBAR ===================== -->
+{% include 'includes/navbar.html' %}
+
+<!-- ===================== HERO SECTION ===================== -->
+<section
+    class="hero-section mb-4 d-flex align-items-center justify-content-center text-center text-white position-relative"
+    style="height: 705px; overflow: hidden;">
+
+    <!-- Background Image -->
+    <img src="{% static 'images/hero-bg.jpg' %}" alt="Hero Background" class="position-absolute w-100 h-100"
+        style="object-fit: cover; top: 0; left: 0; z-index: 1;">
+
+    <!-- Overlay (optional subtle tint) -->
+    <div class="position-absolute w-100 h-100" style="background: rgba(0,0,0,0.4); top: 0; left: 0; z-index: 2;"></div>
+
+    <!-- Text + Search Content -->
+    <div class="container position-relative z-3" style="z-index: 3;">
+        <h1 class="fw-bold mb-4" style="font-size: 48px;">We'd Love To Hear From You</h1>
+
+        <!-- Search Bar -->
+        <form class="d-flex justify-content-center align-items-center mx-auto"
+            style="max-width: 600px; background: white; border-radius: 50px; padding: 5px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <input type="text" class="form-control border-0 shadow-none rounded-pill px-3 py-3"
+                placeholder="Search for WordPress, E commerce..." style="flex: 1; font-size: 16px;">
+            <button type="submit" class="btn fw-semibold px-4 py-2 rounded-pill text-white"
+                style="background-color: #76C01D; margin-right: 5px;">
+                Search
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- ===================== SHOPPING CART HEADING BOX ===================== -->
+<section class="cart-header d-flex align-items-center justify-content-center mx-auto mb-5">
+    <div class="text-center fw-semibold">Shopping Cart</div>
+</section>
+
+<!-- ===== MAIN CART SECTION ===== -->
+<section class="cart-section container my-5">
+    <div class="row g-4">
+
+        <!-- LEFT: CART ITEMS -->
+        <div class="col-lg-8">
+
+            <!-- Top Buttons -->
+            <div class="d-flex justify-content-between align-items-center mb-4" style="background-color: #b1b0b0;">
+                <a href="{% url 'templates' %}" class="btn fw-semibold text-white px-2 shadow-sm"
+                    style="background-color: #76C01D;">Continue Shopping</a>
+                <button class="btn btn-light border fw-semibold px-4 shadow-sm" style="color:#0C2F5C;">Empty
+                    Cart</button>
+            </div>
+
+            <!-- CART ITEMS -->
+            <div class="cart-items">
+
+                <!-- ITEM -->
+                <div class="cart-item d-flex align-items-center justify-content-between border-bottom py-4">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'images/theme1.png' %}" class="rounded me-3" width="120" height="90"
+                            alt="">
+                        <div>
+                            <h5 class="fw-semibold mb-1">Wordpress Theme</h5>
+                            <p class="mb-0 text-muted small">License: <a href="#" class="text-decoration-none"
+                                    style="color:#A3989A;">Regular License</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-sm border">−</button>
+                        <span class="fw-semibold">1</span>
+                        <button class="btn btn-sm border">+</button>
+                    </div>
+
+                    <h6 class="fw-bold mb-0">$99</h6>
+
+                    <i class="bi bi-x-lg fs-5 text-dark cursor-pointer"></i>
+                </div>
+
+                <!-- ITEM -->
+                <div class="cart-item d-flex align-items-center justify-content-between border-bottom py-4">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'images/theme2.png' %}" class="rounded me-3" width="120" height="90"
+                            alt="">
+                        <div>
+                            <h5 class="fw-semibold mb-1">Restaurant Template</h5>
+                            <p class="mb-0 text-muted small">License: <a href="#" class="text-decoration-none"
+                                    style="color:#A3989A;">Regular License</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-sm border">−</button>
+                        <span class="fw-semibold">1</span>
+                        <button class="btn btn-sm border">+</button>
+                    </div>
+
+                    <h6 class="fw-bold mb-0">$12</h6>
+
+                    <i class="bi bi-x-lg fs-5 text-dark cursor-pointer"></i>
+                </div>
+
+                <!-- ITEM -->
+                <div class="cart-item d-flex align-items-center justify-content-between border-bottom py-4">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'images/portfolio.png' %}" class="rounded me-3" width="120" height="90"
+                            alt="">
+                        <div>
+                            <h5 class="fw-semibold mb-1">Avada - Website Builder</h5>
+                            <p class="mb-0 text-muted small">License: <a href="#" class="text-decoration-none"
+                                    style="color:#A3989A;">Regular License</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-sm border">−</button>
+                        <span class="fw-semibold">1</span>
+                        <button class="btn btn-sm border">+</button>
+                    </div>
+
+                    <h6 class="fw-bold mb-0">$12</h6>
+
+                    <i class="bi bi-x-lg fs-5 text-dark cursor-pointer"></i>
+                </div>
+
+                <!-- ITEM -->
+                <div class="cart-item d-flex align-items-center justify-content-between border-bottom py-4">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'images/creativestudio.png' %}" class="rounded me-3" width="120" height="90"
+                            alt="">
+                        <div>
+                            <h5 class="fw-semibold mb-1">CreativeStudio - Agency</h5>
+                            <p class="mb-0 text-muted small">License: <a href="#" class="text-decoration-none"
+                                    style="color:#A3989A;">Regular License</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-sm border">−</button>
+                        <span class="fw-semibold">1</span>
+                        <button class="btn btn-sm border">+</button>
+                    </div>
+
+                    <h6 class="fw-bold mb-0">$15</h6>
+
+                    <i class="bi bi-x-lg fs-5 text-dark cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: CART SUMMARY -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm text-center p-4">
+                <h6 class="fw-semibold mb-2">Your Cart Total</h6>
+                <h2 class="fw-bold mb-3">US$ 424</h2>
+                <p class="text-success fw-semibold mb-4">Total Saving $19</p>
+
+                <a href="{% url 'checkout' %}" class="btn w-100 text-white fw-semibold py-2 mb-3"
+                    style="background-color: #76C01D; box-shadow: 0 6px 0 #5ea017; text-decoration: none;">
+                    Secure Checkout
+                </a>
+
+
+                <p class="text-muted small mb-0">Price displayed excludes any applicable</p>
+                <a href="#" class="text-decoration-underline small" style="color:#0077C2;">taxes and a handling fee</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'includes/footer.html' %}
+{% endblock %}

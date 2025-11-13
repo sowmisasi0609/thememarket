@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ===================== NAVBAR ===================== -->
+{% include 'includes/navbar.html' %}
+
+<!-- ===================== HERO SECTION ===================== -->
+<section
+    class="hero-section mb-4 d-flex align-items-center justify-content-center text-center text-white position-relative"
+    style="height: 705px; overflow: hidden;">
+
+    <!-- Background Image -->
+    <img src="{% static 'images/hero-bg.jpg' %}" alt="Hero Background" class="position-absolute w-100 h-100"
+        style="object-fit: cover; top: 0; left: 0; z-index: 1;">
+
+    <!-- Overlay (optional subtle tint) -->
+    <div class="position-absolute w-100 h-100" style="background: rgba(0,0,0,0.4); top: 0; left: 0; z-index: 2;"></div>
+
+    <!-- Text + Search Content -->
+    <div class="container position-relative z-3" style="z-index: 3;">
+        <h1 class="fw-bold mb-4" style="font-size: 48px;">We'd Love To Hear From You</h1>
+
+        <!-- Search Bar -->
+        <form class="d-flex justify-content-center align-items-center mx-auto"
+            style="max-width: 600px; background: white; border-radius: 50px; padding: 5px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <input type="text" class="form-control border-0 shadow-none rounded-pill px-3 py-3"
+                placeholder="Search for WordPress, E commerce..." style="flex: 1; font-size: 16px;">
+            <button type="submit" class="btn fw-semibold px-4 py-2 rounded-pill text-white"
+                style="background-color: #76C01D; margin-right: 5px;">
+                Search
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- ===================== GET IN TOUCH SECTION ===================== -->
+<section class="py-5 text-center" style="background-color: #F5F7FF;">
+    <div class="container">
+        <!-- Section Heading -->
+        <h2 class="fw-bold mb-2" style="color: #1B2B65;">Get In Touch</h2>
+        <p class="text-muted mb-5" style="font-size: 17px;">
+            Have questions or need assistance? We're here to help. Reach out to us through any <br> of the following
+            channels.
+        </p>
+
+        <!-- Contact Cards -->
+        <div class="row justify-content-center g-4">
+            <!-- Email Us -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card contact-card border-2 text-center p-4 h-100">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle mb-3"
+                            style="width: 80px; height: 80px; background-color: #E9F2FF;">
+                            <img src="{% static 'images/email-icon.png' %}" alt="Email Icon" width="40" height="40">
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color: #1B2B65;">Email Us</h5>
+                        <p class="mb-1 text-muted">Our team is here to help</p>
+                        <p class="fw-semibold" style="color: #2A2261;">support@marketplace.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call Us -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card contact-card border-2 text-center p-4 h-100">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle mb-3"
+                            style="width: 80px; height: 80px; background-color: #E9F2FF;">
+                            <img src="{% static 'images/phone-icon.png' %}" alt="Phone Icon" width="40" height="40">
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color: #1B2B65;">Call Us</h5>
+                        <p class="mb-1 text-muted">Mon–Fri from 9am to 6pm</p>
+                        <p class="fw-semibold" style="color: #2A2261;">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Chat -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card contact-card border-2  text-center p-4 h-100">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle mb-3"
+                            style="width: 80px; height: 80px; background-color: #E9F2FF;">
+                            <img src="{% static 'images/chat-icon.png' %}" alt="Chat Icon" width="40" height="40">
+                        </div>
+                        <h5 class="fw-bold mb-2" style="color: #1B2B65;">Live Chat</h5>
+                        <p class="mb-1 text-muted">Get instant support</p>
+                        <p class="fw-semibold" style="color: #2A2261;">Average response: 2 minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SEND US A MESSAGE SECTION ===================== -->
+<section class="py-5 text-center" style="background-color: #F5F7FF;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Section Heading -->
+        <h2 class="fw-bold mb-2" style="color: #1B2B65;">Send Us a Message</h2>
+        <p class="text-muted mb-5" style="font-size: 17px;">
+            Fill out the form below and we'll get back to you as soon as possible.
+        </p>
+
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="text-start">
+            {% csrf_token %}
+            <div class="row g-4">
+                <!-- First Name -->
+                <div class="col-md-6">
+                    <label for="first_name" class="fw-semibold mb-2" style="color: #1B2B65;">First Name</label>
+                    <input type="text" id="first_name" name="first_name" class="form-control contact-input"
+                        required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-md-6">
+                    <label for="last_name" class="fw-semibold mb-2" style="color: #1B2B65;">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" class="form-control contact-input"
+                         required>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-12">
+                    <label for="email" class="fw-semibold mb-2" style="color: #1B2B65;">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control contact-input"
+                        required>
+                </div>
+
+                <!-- Message -->
+                <div class="col-md-12">
+                    <label for="message" class="fw-semibold mb-2" style="color: #1B2B65;">Message</label>
+                    <textarea id="message" name="message" rows="5" class="form-control contact-input"
+                         required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-md-12  mt-3">
+                    <button type="submit" class="btn fw-semibold px-2 py-2 rounded shadow-lg"
+                        style="background-color: #76C01D; color: #fff; font-size: 17px;">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- ===================== FAQ SECTION ===================== -->
+<section class="py-5 text-center" style="background-color: #F5F7FF;">
+    <div class="container" style="max-width: 900px;">
+        <!-- Heading -->
+        <h2 class="fw-bold mb-2" style="color: #1B2B65;">Frequently Asked Questions</h2>
+        <p class="text-muted mb-5" style="font-size: 17px;">
+            Quick answers to common questions
+        </p>
+
+        <!-- FAQ Accordion -->
+        <div class="accordion" id="faqAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        What are your support hours?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white text-start">
+                        Our support team is available Monday through Friday, 9:00 AM to 6:00 PM EST. We also monitor
+                        emails on weekends and will respond as soon as possible.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How quickly will I get a response?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white text-start">
+                        Response times vary by department: Sales inquiries within 2 hours, Support tickets within 4
+                        hours,
+                        and General inquiries within 24 hours during business days.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do you offer phone support?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white text-start">
+                        Yes! Phone support is available for Business plan subscribers. All other customers can reach us
+                        via email, live chat, or our contact form.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Can I schedule a demo or consultation?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white text-start">
+                        Absolutely! Contact our sales team at <strong>sales@marketplace.com</strong> to schedule a
+                        personalized demo or consultation session.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Where is your company located?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white text-start">
+                        Our headquarters is located in San Francisco, CA, but we have a global remote team serving
+                        customers in over 150 countries.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== HELP CENTER & WE'RE HERE TO HELP ===================== -->
+<section class="py-5 d-flex flex-column align-items-center" style="background-color: #F5F7FF;">
+    <!-- Visit Help Center Button -->
+    <div class="text-center mb-5">
+        <a href="#" class="btn fw-semibold px-4 py-2 rounded shadow-lg"
+            style="background-color: #fff; color: #1B2B65; font-size: 17px;">
+            Visit Help Center
+        </a>
+    </div>
+
+    <!-- Help Card -->
+    <div class="help-card text-center text-white p-5 d-flex flex-column align-items-center justify-content-center">
+        <div class="rounded-circle d-flex align-items-center justify-content-center mb-3"
+            style="width: 60px; height: 60px; background-color: rgba(255,255,255,0.1); border: 3px solid #76C01D;">
+            <i class="bi bi-check2" style="font-size: 32px; color: #76C01D;"></i>
+        </div>
+
+        <h2 class="fw-bold mb-3">We’re Here to Help</h2>
+        <p class="mb-4" style="max-width: 720px; font-size: 17px;">
+            Our dedicated support team is committed to providing you with the best <br> experience.
+            Whether you need technical assistance, have sales <br> questions, or just want to say hello,
+            we're always happy to hear from you.
+        </p>
+
+        <!-- Highlights -->
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill" style="color: #76C01D;"></i>
+                <span class="fw-semibold">24-hour response time</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill" style="color: #76C01D;"></i>
+                <span class="fw-semibold">Expert support team</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill" style="color: #76C01D;"></i>
+                <span class="fw-semibold">Multiple contact options</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% include 'includes/footer.html' %}
+{% endblock %}

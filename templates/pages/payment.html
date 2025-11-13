@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include "includes/navbar.html" %}
+
+
+
+<!-- SUCCESS PAGE -->
+<div class="container text-center mt-4 mb-5">
+
+    <!-- Animated Tick Wrapper (Centered) -->
+    <div class="d-flex justify-content-center align-items-center mt-4 mb-4">
+        <div class="checkmark-circle">
+            <i class="bi bi-check-lg"></i>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="fw-bold" style="color:#000;">Payment Successful</h1>
+    <p class="fs-5 mt-2">Successful Paid <span class="fw-bold">US$ 191.00</span></p>
+
+    <!-- Section Title -->
+    <h3 class="fw-semibold mt-5 mb-3">Payment Details</h3>
+
+    <!-- Payment Details Card -->
+    <div class="details-card mx-auto p-4 shadow-sm">
+
+        <div class="row mb-3">
+            <div class="col-6 text-start text-muted fw-semibold">Transaction ID</div>
+            <div class="col-6 text-end fw-bold">356144228732</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-6 text-start text-muted fw-semibold">Date</div>
+            <div class="col-6 text-end fw-bold">21 May 2025</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-6 text-start text-muted fw-semibold">Type of Transaction</div>
+            <div class="col-6 text-end fw-bold">Credit Card</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-6 text-start text-muted fw-semibold">Amount</div>
+            <div class="col-6 text-end fw-bold">US$ 191.00</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-6 text-start text-muted fw-semibold">Tax%</div>
+            <div class="col-6 text-end fw-bold">$90</div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 text-start text-muted fw-semibold">Status</div>
+            <div class="col-6 text-end fw-bold text-success">Success</div>
+        </div>
+
+    </div>
+</div>
+<!-- Back Button -->
+<div class="container mt-4 d-flex justify-content-center">
+    <a href="/" class="btn fw-semibold px-4 py-2 shadow-sm"
+        style="background-color:#76C01D; color:white; border-radius:8px; box-shadow:0 4px 0 #5ea017;">
+        ← Back to Home
+    </a>
+</div>
+
+
+<!-- CUSTOM CSS -->
+<style>
+    /* Rotating Tick Animation */
+    .checkmark-circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #28a745;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: rotateCircle 1.5s ease-in-out;
+    }
+
+    .checkmark-circle i {
+        color: #fff;
+        font-size: 80px;
+    }
+
+    @keyframes rotateCircle {
+        0% {
+            transform: rotate(-360deg) scale(0);
+            opacity: 0;
+        }
+
+        50% {
+            transform: rotate(-180deg) scale(1.1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Payment details card */
+    .details-card {
+        max-width: 520px;
+        border-radius: 18px;
+        border: 1px solid #e7e7e7;
+        background: white;
+    }
+</style>
+
+{% endblock %}

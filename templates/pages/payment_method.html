@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'includes/navbar.html' %}
+
+<!-- ===== PAYMENT METHOD TITLE ===== -->
+<section class="container mt-5 mb-4">
+    <h2 class="fw-bold" style="color:#0C2F5C;">Select Payment Method</h2>
+    <hr />
+</section>
+
+<!-- ===== PAYMENT SECTION ===== -->
+<section class="payment-section container mb-5">
+    <div class="row g-5">
+
+        <!-- LEFT SIDE - PAYMENT OPTIONS -->
+        <div class="col-lg-8">
+            <div class="p-4 rounded shadow-sm bg-white">
+
+                <!-- Credit/Debit Card Option -->
+                <div class="form-check mb-4">
+
+                    <!-- TITLE + LOGOS RIGHT -->
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <input class="form-check-input" type="radio" name="payment" id="creditCard" checked>
+                            <label class="form-check-label fw-semibold" for="creditCard" style="color:#0C2F5C;">
+                                Credit/Debit Cards
+                            </label>
+                            <p class="text-muted small mb-0">Pay with your Credit / Debit Card</p>
+                        </div>
+
+                        <!-- Logos Right -->
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="{% static 'images/visa.png' %}" width="40">
+                            <img src="{% static 'images/american.png' %}" width="40">
+                            <img src="{% static 'images/maestro.png' %}" width="40">
+                        </div>
+                    </div>
+
+                    <!-- Card Fields -->
+                    <div class="border rounded-3 p-3 mt-3">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Card Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control py-2" placeholder="Card Number">
+                                <span class="input-group-text"><i class="bi bi-credit-card-2-front"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">MM / YY</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control py-2" placeholder="MM / YY">
+                                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">CVV</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control py-2" placeholder="CVV">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct Bank Transfer -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" name="payment" id="bankTransfer">
+                    <label class="form-check-label fw-semibold" style="color:#0C2F5C;">
+                        Direct Bank Transfer
+                    </label>
+                    <p class="text-muted small">Make payment directly through your bank account.</p>
+                </div>
+
+                <!-- Other Payment Methods -->
+                <div class="form-check mb-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <input class="form-check-input" type="radio" name="payment" id="otherPayment">
+                            <label class="form-check-label fw-semibold" style="color:#0C2F5C;">
+                                Other Payment Methods
+                            </label>
+                            <p class="text-muted small mb-0">Make payment through GPay, PayPal, PhonePe etc.</p>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-1">
+                            <img src="{% static 'images/paypal.jpg' %}" width="40">
+                            <img src="{% static 'images/gpay.png' %}" width="40">
+                            <img src="{% static 'images/phonepe.png' %}" width="40">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="{% url 'checkout' %}" class="btn btn-light fw-semibold px-4 py-2 shadow-sm"
+                        style="color:#0C2F5C;">Back</a>
+
+                    <button id="paySecurelyBtn" class="btn text-white fw-semibold px-4 py-2 shadow-sm"
+                        style="background-color:#76C01D; box-shadow:0 4px 0 #5ea017;">
+                        Pay Securely
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE - ORDER SUMMARY -->
+        <div class="col-lg-4">
+            <div class="p-4 rounded-4 shadow-sm bg-light">
+
+                <h5 class="fw-bold mb-4">
+                    Order Summary
+                    <span class="text-muted fs-6">4 Items</span>
+                </h5>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Wordpress Theme</span> <strong>$99.00</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Restaurant Template</span> <strong>$12.00</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Avada - Website Builder</span> <strong>$12.00</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-4">
+                    <span>CreativeStudio - Agency</span> <strong>$15.00</strong>
+                </div>
+
+                <hr>
+
+                <div class="d-flex justify-content-between text-success fw-semibold mb-1">
+                    <span>Total discount</span> <span>$6.00</span>
+                </div>
+
+                <div class="d-flex justify-content-between text-muted mb-3">
+                    <span>Handling Fee</span> <span>$0.00</span>
+                </div>
+
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+                    <span>Total</span> <span>US$ 191.00</span>
+                </div>
+
+                <div class="text-center text-muted">
+                    <i class="bi bi-lock-fill me-2"></i>
+                    Secure Checkout
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SPINNER OVERLAY -->
+<div id="loadingOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.5); backdrop-filter:blur(3px);
+            z-index:2000; justify-content:center; align-items:center;">
+    <div class="spinner-border text-light" style="width:4rem; height:4rem;"></div>
+</div>
+
+<!-- JS -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const payBtn = document.getElementById("paySecurelyBtn");
+        const overlay = document.getElementById("loadingOverlay");
+
+        payBtn.addEventListener("click", () => {
+            overlay.style.display = "flex";
+            setTimeout(() => {
+                window.location.href = "/payment";
+            }, 2000);
+        });
+    });
+</script>
+
+{% endblock %}

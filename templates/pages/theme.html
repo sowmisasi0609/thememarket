@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ===================== NAVBAR ===================== -->
+{% include 'includes/navbar.html' %}
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <!-- Left: Text Content -->
+            <div class="col-md-6">
+                <h1 class="fw-bold" style="color:#5A38F7;">WordPress Themes</h1>
+                <p class="mt-3 text-secondary" style="font-size:17px; line-height:1.7;">
+                    Discover premium WordPress themes <br> crafted by top designers and developers. <br>
+                    Each theme is carefully reviewed for quality, performance, and design excellence.
+                </p>
+
+                <!-- SEARCH BAR -->
+                <form class="position-relative mt-4 mx-auto mx-lg-0" style="max-width:400px;">
+                    <input type="search" class="form-control p-3 rounded-pill" placeholder="Search for HTML, UI Kits..."
+                        aria-label="Search" style="border:1.5px solid #ccc; padding-right:130px;">
+                    <button type="submit" class="btn text-white fw-semibold rounded-pill position-absolute"
+                        style="background-color:#76C01D; right:6px; top:6px; bottom:6px; padding:0 25px;">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Hero Image -->
+            <div class="col-md-6 text-center">
+                <img src="{% static 'images/wordpress-hero.png' %}" alt="WordPress Themes"
+                    class="img-fluid rounded-4 shadow-sm">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== THEMES FILTER & PRODUCTS ===================== -->
+<section class="py-5" style="background-color:#F8F7FF;">
+    <div class="container">
+
+        <!-- Divider Line -->
+        <hr class="border-dark mb-5">
+
+        <!-- Heading -->
+        <div class="text-center mb-4">
+            <h5 class="fw-bold text-dark">
+                website templates compatible with <br>
+                WooCommerce sorted by best sellers.
+            </h5>
+        </div>
+
+        <!-- SORT DROPDOWN CENTERED -->
+        <div class="text-center mb-4">
+            <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold dropdown-toggle" type="button"
+                    id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Best Sellers
+                </button>
+                <ul class="dropdown-menu text-center" aria-labelledby="sortDropdown">
+                    <li><a class="dropdown-item fw-semibold" href="#">Most Popular</a></li>
+                    <li><a class="dropdown-item fw-semibold" href="#">Newest First</a></li>
+                    <li><a class="dropdown-item fw-semibold" href="#">Price, Low to High</a></li>
+                    <li><a class="dropdown-item fw-semibold" href="#">Price, High to Low</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- VIEW TOGGLE BUTTONS -->
+        <div class="d-flex justify-content-center align-items-center mb-5 gap-3">
+            <div class="btn-group shadow-sm rounded-pill overflow-hidden">
+                <button id="gridView" class="btn active" style="background-color:#76C01D; color:white;">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </button>
+                <button id="listView" class="btn" style="background-color:#E6E6E6;">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT: FILTERS + THEMES -->
+        <div class="row">
+            <!-- LEFT FILTERS -->
+            <div class="col-lg-3 mb-4">
+                <h5 class="fw-bold mb-4">Filters</h5>
+
+                <div class="d-flex flex-column gap-3">
+                    <select class="form-select fw-semibold text-white" style="background-color:#1B1761; border:none;">
+                        <option selected>Category</option>
+                        <option>Business</option>
+                        <option>Portfolio</option>
+                        <option>Blog</option>
+                        <option>E-Commerce</option>
+                        <option>Landing Page</option>
+                    </select>
+
+                    <select class="form-select fw-semibold text-white" style="background-color:#1B1761; border:none;">
+                        <option selected>Price</option>
+                        <option>₹500 - ₹1000</option>
+                        <option>₹1500 - ₹18000</option>
+                        <option>₹2000 - ₹2250</option>
+                        <option>₹2250 - ₹3225</option>
+                    </select>
+
+                    <select class="form-select fw-semibold text-white" style="background-color:#1B1761; border:none;">
+                        <option selected>Rating</option>
+                        <option>5 Stars</option>
+                        <option>4+ Stars</option>
+                        <option>3+ Stars</option>
+                    </select>
+
+                    <select class="form-select fw-semibold text-white" style="background-color:#1B1761; border:none;">
+                        <option selected>Features</option>
+                        <option>Responsive</option>
+                        <option>One Page</option>
+                        <option>Dark Mode</option>
+                        <option>Page Builder</option>
+                        <option>WooCommerce</option>
+                    </select>
+
+                    <select class="form-select fw-semibold text-white" style="background-color:#1B1761; border:none;">
+                        <option selected>Compatibility</option>
+                        <option>Wordpress 6.0+</option>
+                        <option>Wordpress 5.8+</option>
+                        <option>Gutenberg</option>
+                        <option>Classic Editor</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- RIGHT PRODUCTS GRID -->
+            <div class="col-lg-9">
+                <div class="row g-4">
+                    {% include 'includes/themes_cards.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== STAY UPDATED SECTION ===================== -->
+<section class="stay-updated py-5 text-center text-white mb-5" style="background-color:#2A2261;">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Stay Updated</h2>
+        <p class="mb-4">
+            Get the latest themes, exclusive deals, and design inspiration delivered to your inbox weekly.
+        </p>
+
+        <form class="d-flex justify-content-center align-items-center mb-3 flex-wrap gap-2">
+            <input type="email" class="form-control p-3 rounded-start" placeholder="Enter your email"
+                style="max-width:400px; border:none;">
+            <button type="submit" class="btn px-4 fw-semibold rounded-end"
+                style="background-color:#76C01D; color:white;">
+                Subscribe
+            </button>
+        </form>
+
+        <p class="small text-white-50 mt-3">
+            By subscribing, you agree to our
+            <a href="#" class="text-decoration-underline text-white-50">Privacy Policy</a>
+            and consent to receive updates.
+        </p>
+    </div>
+</section>
+
+{% include 'includes/footer.html' %}
+{% endblock %}

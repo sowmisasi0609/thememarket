@@ -1,0 +1,988 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ===================== NAVBAR ===================== -->
+{% include 'includes/navbar.html' %}
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="hero-section py-5" style="background-color: #F8F7FF;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Side -->
+            <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 text-center text-lg-start">
+
+                <!-- BADGE -->
+                <span class="hero-badge px-4 py-3 mb-4 text-white d-inline-block"
+                    style="background-color:#431A97; box-shadow:0px 4px 10px rgba(67,26,151,0.3); border-radius:12px;">
+                    50,000+ Premium Templates Available
+                </span>
+
+                <!-- HEADING -->
+                <h1 class="fw-bold display-5 lh-sm mb-3" style="font-family: 'Poppins', sans-serif;">
+                    Build Stunning <br>
+                    <span class="text-gradient">Websites Faster</span>
+                </h1>
+
+                <!-- SUBTEXT -->
+                <p class="text-secondary mb-4" style="max-width: 500px;">
+                    Access thousands of professionally designed WordPress themes and templates.
+                    Launch your dream website in minutes, not months.
+                </p>
+
+                <!-- SEARCH BAR -->
+                <form class="position-relative mt-4 mx-auto mx-lg-0" style="max-width:400px;">
+                    <input type="search" class="form-control p-3 rounded-pill" placeholder="Search for HTML, UI Kits..."
+                        aria-label="Search" style="border:1.5px solid #ccc; padding-right:130px;">
+                    <button type="submit" class="btn text-white fw-semibold rounded-pill position-absolute"
+                        style="background-color:#76C01D; right:6px; top:6px; bottom:6px; padding:0 25px;">
+                        Search
+                    </button>
+                </form>
+
+                <!-- Stats Section -->
+                <div
+                    class="mt-5 d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-4">
+
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <p class="ms-3 mb-0 fw-semibold text-dark">
+                            12M+ Users<br>
+                            <small class="text-secondary">Trusted worldwide</small>
+                        </p>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-history text-success fs-4"></i>
+                        <p class="ms-2 mb-0 fw-semibold text-dark">
+                            4.9/5 Rating<br>
+                            <small class="text-secondary">From 50k reviews</small>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 position-relative hero-figma">
+            
+                <!-- Back Big full-width Image -->
+                <img src="{% static 'images/sample4.png' %}" class="hero-img back-img">
+            
+                <!-- Middle Large Travel Image -->
+                <img src="{% static 'images/sample3.png' %}" class="hero-img main-img">
+            
+                <!-- Top Right Food Image -->
+                <img src="{% static 'images/sample1.png' %}" class="hero-img top-right-img">
+            
+                <!-- Mid Right Image -->
+                <img src="{% static 'images/sample2.png' %}" class="hero-img mid-right-img">
+            
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== BROWSE BY CATEGORY ===================== -->
+<section class="category-section py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+
+        <!-- Heading -->
+        <h5 class="browse-btn mb-3">Browse by Category</h5>
+        <p class="text-secondary mb-5 fs-6">Find the perfect template for your project</p>
+
+        <!-- Category Grid -->
+        <div class="row justify-content-center g-4">
+
+            {% comment %} Category cards {% endcomment %}
+            {% for category in categories %}
+            {% endfor %}
+            <!-- WordPress -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#0082FF,#5D00FF);">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Word Press</h6>
+                    <p class="text-secondary small">14,289 Items</p>
+                </div>
+            </div>
+
+            <!-- eCommerce -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#00C2FF,#0077B6);">
+                        <i class="bi bi-briefcase-fill"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">e Commerce</h6>
+                    <p class="text-secondary small">8,562 Items</p>
+                </div>
+            </div>
+
+            <!-- Photography -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#6C00FF,#A700FF);">
+                        <i class="bi bi-camera-fill"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Photography</h6>
+                    <p class="text-secondary small">3,421 Items</p>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="col-6 col-md-3">
+                <div class="category-card active-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#76C01D,#4BAE0E);">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Business</h6>
+                    <p class="text-secondary small">9,156 Items</p>
+                </div>
+            </div>
+
+            <!-- Blog Magazine -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#E60073,#FF4081);">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Blog Magazine</h6>
+                    <p class="text-secondary small">5,234 Items</p>
+                </div>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#FF6B00,#FFB800);">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Mobile Apps</h6>
+                    <p class="text-secondary small">2,890 Items</p>
+                </div>
+            </div>
+
+            <!-- Marketing -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#FFD500,#FF9100);">
+                        <i class="bi bi-megaphone-fill"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Marketing</h6>
+                    <p class="text-secondary small">4,567 Items</p>
+                </div>
+            </div>
+
+            <!-- Technology -->
+            <div class="col-6 col-md-3">
+                <div class="category-card">
+                    <div class="icon-circle" style="background: linear-gradient(135deg,#00BFFF,#1A73E8);">
+                        <i class="bi bi-smartwatch"></i>
+                    </div>
+                    <h6 class="fw-semibold mt-3">Technology</h6>
+                    <p class="text-secondary small">6,123 Items</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FEATURED THEMES ===================== -->
+<section class="featured-section py-5" style="background-color: #F8F7FF;">
+    <div class="container">
+
+        <!-- ===== FEATURED SECTION HEADER ===== -->
+        <div class="text-center mb-5">
+            <!-- Title -->
+            <h5 class="featured-title mb-3">Featured WordPress Themes</h5>
+        
+            <!-- Subtitle -->
+            <p class="fs-6 text-secondary mb-4">
+                Every week, our staff personally hand-pick some of the best new website themes from our collection.
+            </p>
+        
+            <!-- Button -->
+            <div>
+                <button class="view-all-btn">View all Featured Themes</button>
+            </div>
+        </div>
+
+
+        <!-- Theme Grid -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme1.png' %}" alt="Flatsome Multi-Purpose"
+                            class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Flatsome - Multi-Purpose</h6>
+                        <p class="text-secondary small mb-2">by UX-themes</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$99</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme2.png' %}" alt="Restaurant Website"
+                            class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Restaurant Website</h6>
+                        <p class="text-secondary small mb-2">by UX-themes</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$12</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme3.png' %}" alt="Avada Website Builder"
+                            class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Avada - Website Builder For</h6>
+                        <p class="text-secondary small mb-2">by ThemeFusion</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$12</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme4.png' %}" alt="Salient Ecommerce" class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Salient - Ecommerce multipurpose</h6>
+                        <p class="text-secondary small mb-2">by UX-themes</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$12</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme5.png' %}" alt="Uncode Portfolio" class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Uncode - Portfolio</h6>
+                        <p class="text-secondary small mb-2">by UX-themes</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$12</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <div class="theme-img-wrapper">
+                        <img src="{% static 'images/theme6.png' %}" alt="Porto HTML Code" class="img-fluid theme-img">
+                    </div>
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Porto - HTML Code</h6>
+                        <p class="text-secondary small mb-2">by P-THEMES</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="fw-bold">$12</span>
+                                <span class="text-warning ms-2">★★★★☆</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRENDING COLLECTIONS SECTION ===== -->
+<section class="trending-section py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+        <!-- Heading -->
+        <h5 class="trending-title mb-3">Trending Collections</h5>
+        <p class="text-secondary mb-5 fs-6">
+            Curated collections from our experts
+        </p>
+
+        <!-- Cards Row -->
+        <div class="row justify-content-center g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="trend-card">
+                    <div class="trend-img-wrapper">
+                        <img src="{% static 'images/trend1.png' %}" alt="Modern Business Templates" class="trend-img">
+                    </div>
+                    <div class="trend-info">
+                        <h6 class="fw-semibold text-success mb-2">Modern Business Templates</h6>
+                        <p class="small mb-2 text-secondary">Professional templates for corporate websites</p>
+                        <span class="badge bg-success-subtle text-success fw-semibold">24 Items</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="trend-card">
+                    <div class="trend-img-wrapper">
+                        <img src="{% static 'images/trend2.png' %}" alt="E-Commerce Solutions" class="trend-img">
+                    </div>
+                    <div class="trend-info">
+                        <h6 class="fw-semibold text-success mb-2">E-Commerce Solutions</h6>
+                        <p class="small mb-2 text-secondary">Everything you need for online stores</p>
+                        <span class="badge bg-success-subtle text-success fw-semibold">32 Items</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="trend-card">
+                    <div class="trend-img-wrapper">
+                        <img src="{% static 'images/trend3.png' %}" alt="Portfolio Templates" class="trend-img">
+                    </div>
+                    <div class="trend-info">
+                        <h6 class="fw-semibold text-success mb-2">Portfolio Templates</h6>
+                        <p class="small mb-2 text-secondary">Creative designs for UI/UX professionals</p>
+                        <span class="badge bg-success-subtle text-success fw-semibold">18 Items</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUSTED BY MILLIONS SECTION ===== -->
+<section class="trusted-section text-center text-white">
+    <div class="container trusted-content">
+        <!-- Heading -->
+        <h2 class="fw-bold mb-2">Trusted by Millions Worldwide</h2>
+        <p class="mb-5 fs-6">Join the largest digital marketplace community</p>
+
+        <!-- Stats Row -->
+        <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold display-6 mb-1">12M+</h3>
+                <p class="mb-0">Community Members</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold display-6 mb-1">50K+</h3>
+                <p class="mb-0">Digital Products</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold display-6 mb-1">500M+</h3>
+                <p class="mb-0">Total Downloads</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h3 class="fw-bold display-6 mb-1">15K+</h3>
+                <p class="mb-0">Elite Authors</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== BEST SELLERS SECTION ===== -->
+<section class="best-sellers-section py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+
+        <!-- Section Heading -->
+        <div class="best-sellers-heading mb-4">
+            <h3 class="best-sellers-title mb-2">Best Sellers</h3>
+            <p class="best-sellers-subtitle">Top selling items this period</p>
+        </div>
+
+        <!-- Toggle Buttons -->
+        <div class="switcher-toggle mb-4 d-inline-flex shadow-lg rounded-pill p-1">
+            <button id="weekBtn" class="switch-btn active" data-target="weekCards">This Week</button>
+            <button id="monthBtn" class="switch-btn" data-target="monthCards">This Month</button>
+        </div>
+
+        <!-- This Week -->
+        <div id="weekCards" class="cards-container show">
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/food-delivery.png' %}" class="theme-img"
+                            alt="Food Delivery Website">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">Food Delivery Website</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$12</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/agency-builder.png' %}" class="theme-img" alt="Avada Builder">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">Avada - Website Builder For</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$19</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/restaurant-theme.png' %}" class="theme-img"
+                            alt="Restaurant Website">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">Restaurant Website</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$25</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- This Month -->
+        <div id="monthCards" class="cards-container">
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/grab-deals.png' %}" class="theme-img" alt="Grab Big Deals Website">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">Grab Big Deals Website</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$12</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/uncode.png' %}" class="theme-img" alt="Uncode Multiuse">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">Uncode - Creative Multiuse</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$12</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="theme-card">
+                        <img src="{% static 'images/ecommerce.png' %}" class="theme-img" alt="E-Commerce Website">
+                        <div class="theme-info">
+                            <h6 class="fw-semibold mt-2">E-Commerce Website</h6>
+                            <p class="text-secondary small mb-2">by UX-themes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div><span class="fw-bold">$12</span><span class="text-warning ms-2">★★★★☆</span></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                    <button class="action-btn">Live Preview</button>
+                                </div>
+                            </div>
+                            <p class="text-secondary small mt-2">205 Sales</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== NEW ARRIVALS SECTION ===== -->
+<section class="new-arrivals py-5" style="background-color: #F8F7FF;">
+    <div class="container position-relative text-center">
+
+        <!-- Header -->
+        <div class="mb-4 position-relative">
+            <h5 class="new-arrivals-title d-inline-block">New Arrivals</h5>
+            <p class="new-arrivals-subtitle mt-3 mb-4">Fresh templates added this week</p>
+
+            <!-- View All Button (Top-Right Corner) -->
+            <a href="#" class="view-all-link position-absolute top-0 end-0">
+                View All <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        
+
+        <!-- Cards -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/travel-theme.png' %}" class="theme-img" alt="Zenix Dashboard">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Zenix - Modern Dashboard &</h6>
+                        <p class="text-secondary small mb-2">by DexignZone</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$99</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/shopmaster.png' %}" class="theme-img" alt="ShopMaster">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">ShopMaster - Ultimate eCommerce</h6>
+                        <p class="text-secondary small mb-2">by ThemePure</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$36</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/blogify.png' %}" class="theme-img" alt="Blogify Theme">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">Blogify - Minimal Blog WordPress</h6>
+                        <p class="text-secondary small mb-2">by ThemeFusion</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$25</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2 (3 More Cards) -->
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/launchpad.png' %}" class="theme-img" alt="LaunchPad">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">LaunchPad - SaaS Landing Page</h6>
+                        <p class="text-secondary small mb-2">by UX-themes</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$22</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/appflow.png' %}" class="theme-img" alt="AppFlow Showcase">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">AppFlow - Mobile App Showcase</h6>
+                        <p class="text-secondary small mb-2">by DigitalHub</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$52</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="theme-card">
+                    <img src="{% static 'images/creativestudio.png' %}" class="theme-img" alt="CreativeStudio Agency">
+                    <div class="theme-info">
+                        <h6 class="fw-semibold mt-2">CreativeStudio - Agency</h6>
+                        <p class="text-secondary small mb-2">by P-THEMES</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="fw-bold">$15</span><span class="text-warning ms-2">★★★★☆</span></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="action-btn"><i class="bi bi-cart3"></i></button>
+                                <button class="action-btn">Live Preview</button>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mt-2">205 Sales</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE OUR MARKETPLACE ===== -->
+<section class="why-choose py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+
+        <!-- Heading -->
+        <h5 class="why-title d-inline-block mb-3">Why Choose Our Marketplace</h5>
+        <p class="why-subtitle mb-5">Everything you need to build amazing websites</p>
+
+        <!-- Features Grid -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon1.png' %}" alt="Quality" class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">Quality Guaranteed</h6>
+                    <p class="text-secondary mb-0">All items are reviewed by our team to ensure the highest standards
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon2.png' %}" alt="Instant Downloads"
+                            class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">Instant Downloads</h6>
+                    <p class="text-secondary mb-0">Get immediate access to your purchases, no waiting required</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon3.png' %}" alt="Support" class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">24/7 Support</h6>
+                    <p class="text-secondary mb-0">Our dedicated support team is here to help you anytime</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon4.png' %}" alt="Updates" class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">Regular Updates</h6>
+                    <p class="text-secondary mb-0">Authors constantly update items with new features and improvements
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon5.png' %}" alt="Elite Authors" class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">Elite Authors</h6>
+                    <p class="text-secondary mb-0">Work with the best designers and developers from around the world</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-12 col-md-4">
+                <div class="feature-card p-4">
+                    <div class="icon-wrapper mb-3">
+                        <img src="{% static 'images/icons/icon6.png' %}" alt="Value" class="feature-icon">
+                    </div>
+                    <h6 class="fw-bold mb-2">Great Value</h6>
+                    <p class="text-secondary mb-0">Competitive pricing with frequent sales and discounts</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== STAY UPDATED SECTION ===== -->
+<section class="stay-updated py-5">
+    <div class="container text-center text-white">
+
+        <h2 class="fw-bold mb-3">Stay Updated</h2>
+        <p class="lead mb-4">
+            Get the latest themes, exclusive deals, and design inspiration<br>
+            delivered to your inbox weekly
+        </p>
+
+        <!-- Email Form -->
+        <form class="d-flex justify-content-center align-items-center mb-3 flex-wrap gap-2">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+
+        <p class="small text-light opacity-75">
+            By subscribing, you agree to our <a href="#" class="privacy-link">Privacy Policy</a> and consent to receive
+            updates
+        </p>
+
+    </div>
+</section>
+
+<!-- ===== WHAT OUR CUSTOMERS SAY ===== -->
+<section class="testimonials py-5" style="background-color: #F8F7FF;">
+    <div class="container text-center">
+
+        <!-- Heading -->
+        <h5 class="testimonials-title d-inline-block mb-3">What Our Customers Say</h5>
+        <p class="testimonials-subtitle mb-5">Join thousands of satisfied customers</p>
+
+        <!-- Testimonials Row -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Sarah.png' %}" alt="Sarah Johnson"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Sarah Johnson</h6>
+                    <p class="text-secondary small mb-2">Web Developer</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        The quality of themes on this marketplace is outstanding.
+                        I've built over 20 client sites using templates from here and they never disappoint.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Michael.png' %}" alt="Michael Chen"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Michael Chen</h6>
+                    <p class="text-secondary small mb-2">Agency Owner</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        As an agency, we rely on high-quality templates to deliver projects quickly.
+                        The variety and quality here are unmatched in the industry.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="testimonial-card p-4">
+                    <img src="{% static 'images/customers/Emily.png' %}" alt="Emily Rodriguez"
+                        class="testimonial-img mb-3">
+                    <h6 class="fw-bold mb-1">Emily Rodriguez</h6>
+                    <p class="text-secondary small mb-2">Freelance Designer</p>
+                    <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-secondary">
+                        I love how easy it is to customize these themes.
+                        The documentation is excellent and the support from authors is fantastic.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer py-5">
+    <div class="container">
+
+        <!-- Footer Columns -->
+        <div class="row gy-4">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-3">
+                <h4 class="footer-logo mb-3">ThemeMarket</h4>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">All Items</a></li>
+                    <li><a href="#">WordPress Themes</a></li>
+                    <li><a href="#">HTML Templates</a></li>
+                    <li><a href="#">UI Templates</a></li>
+                    <li><a href="#">Plugins</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-6 col-md-3">
+                <h6 class="footer-heading">Company</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="col-6 col-md-3">
+                <h6 class="footer-heading">Support</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div class="col-6 col-md-3">
+                <h6 class="footer-heading">Legal</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">License Agreement</a></li>
+                </ul>
+
+                <!-- Social Icons -->
+                <div class="social-icons d-flex justify-content-md-end justify-content-center gap-3 mt-4">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="footer-divider mt-5 mb-3">
+
+        <!-- Copyright -->
+        <p class="footer-copy text-center mb-0">
+            © 2025 <strong>ThemeMarket</strong>. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+{% endblock %}
